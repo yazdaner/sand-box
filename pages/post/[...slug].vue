@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h1>{{ route.params.id }}</h1>
-        <h1>{{ route.query.name }}</h1>
+        <h1>{{ route.params.slug[0] }}</h1>
     </div>
 </template>
 <script setup>
