@@ -1,5 +1,6 @@
 <template>
     <div>
+            <LayoutsLacalStorage />
         <h1>index</h1>
         <NuxtLink to="/about">about link</NuxtLink>
         <br>
