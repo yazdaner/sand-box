@@ -6,6 +6,10 @@
         <br>
         <button @click="goToPost">go to post</button>
         <button @click="setChangeLayout()">change layout</button>
+        <hr>
+        <h2>count : {{ count }}</h2>
+        <button @click="increment">increment</button>
+        <button @click="decrement">decrement</button>
     </div>
 </template>
 <script setup>
@@ -15,4 +19,5 @@
     function setChangeLayout(){
         setPageLayout('custom');
     }
+    const {count,increment,decrement} = useCounter();
 </script>
