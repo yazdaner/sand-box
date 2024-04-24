@@ -1,5 +1,5 @@
 export const useCounter = () => {
-  const count = ref(0);
+  const count = useState('count',()=> 0 );
 
   const increment = () => {
     count.value++;
