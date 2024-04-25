@@ -23,4 +23,13 @@
     function setChangeLayout(){
         setPageLayout('custom');
     }
+
+
+    definePageMeta({
+        // middleware : ()=>{
+        //     console.log('inline middleware');
+        // },
+        middleware : 'log'
+    })
+
 </script>
