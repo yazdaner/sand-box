@@ -7,17 +7,20 @@
         <button @click="goToPost">go to post</button>
         <button @click="setChangeLayout()">change layout</button>
         <hr>
-        <h2>count : {{ count }}</h2>
-        <button @click="increment">increment</button>
-        <button @click="decrement">decrement</button>
+      
+        <h2>count : {{ counter.count }}</h2>
+        <button @click="counter.increment(4)">increment</button>
+        <button @click="counter.decrement(4)">decrement</button>
     </div>
 </template>
 <script setup>
+
+    import { useCounter } from '../stores/counter';
+    const counter = useCounter();
     function goToPost(){
         navigateTo('/post')
     }
     function setChangeLayout(){
         setPageLayout('custom');
     }
-    const {count,increment,decrement} = useCounter();
 </script>
