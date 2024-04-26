@@ -12,6 +12,10 @@
         <h2>count : {{ counter.count }}</h2>
         <button @click="counter.increment(4)">increment</button>
         <button @click="counter.decrement(4)">decrement</button>
+        <br>
+        <br>
+        <NuxtImg src="/images/image.png" width="500" alt="" />
+        <br>
     </div>
 </template>
 <script setup>
@@ -33,8 +37,5 @@
         // },
         middleware : 'log'
     });
-
-
-    
 
 </script>
