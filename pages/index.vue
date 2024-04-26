@@ -8,13 +8,15 @@
         <button @click="setChangeLayout()">change layout</button>
         <hr>
       
+        <h1>{{ $hello('yazdan') }}</h1>
         <h2>count : {{ counter.count }}</h2>
         <button @click="counter.increment(4)">increment</button>
         <button @click="counter.decrement(4)">decrement</button>
     </div>
 </template>
 <script setup>
-
+    const {$hello} = useNuxtApp();
+    
     import { useCounter } from '../stores/counter';
     const counter = useCounter();
     function goToPost(){
@@ -30,6 +32,9 @@
         //     console.log('inline middleware');
         // },
         middleware : 'log'
-    })
+    });
+
+
+    
 
 </script>
