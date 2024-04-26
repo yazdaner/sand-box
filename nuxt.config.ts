@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     transpile : ['vue-toastification']
   },
 
+  css : ['~/assets/css/main.css','~/assets/scss/main.scss'],
+
   devtools: { enabled: true },
   app: {
     head: {
