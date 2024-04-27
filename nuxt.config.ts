@@ -20,4 +20,11 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  runtimeConfig: {
+    apiSecret: process.env.API,
+    public: {
+      apiBase: '/api'
+    }
+  }
 });

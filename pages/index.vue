@@ -38,6 +38,7 @@
 <script setup>
 const { $hello } = useNuxtApp();
 
+import log from '~/middleware/log';
 import { useCounter } from '../stores/counter';
 const counter = useCounter();
 function goToPost() {
@@ -65,5 +66,8 @@ function liveToastBtn(){
   const toastBootstrap = $bootstrap.Toast.getOrCreateInstance(liveToast.value)
     toastBootstrap.show()
 }
+
+const runtimeConfig = useRuntimeConfig();
+console.log(runtimeConfig);
 
 </script>
