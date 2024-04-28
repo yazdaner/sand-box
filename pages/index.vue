@@ -1,9 +1,12 @@
 <template>
     <div>
-        {{ data.data.id }}
+        {{ data }}
     </div>
 </template>
 <script setup>
-    const data  = await $fetch("http://localhost:3000/api/posts/2123/asdasd/sadwqr23/32423")
-    console.log(data);
+const data = await $fetch("http://localhost:3000/api/test?checked=true", {
+    method: 'POST',
+    body: {x: 'good'}
+})
+console.log(data);
 </script>
